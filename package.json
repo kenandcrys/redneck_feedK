@@ -1,42 +1,32 @@
 {
-  "name": "redneck-feed-delivered",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@testing-library/jest-dom": "^5.17.0",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-router-dom": "^6.15.0",
-    "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4"
-  },
+  "name": "RedNeck-Feeds-LLC",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "render-postbuild": "npm run build --prefix frontend",
+    "install": "npm --prefix backend install backend && npm --prefix frontend install frontend",
+    "dev:backend": "npm install --prefix backend start",
+    "dev:frontend": "npm install --prefix frontend start",
+    "sequelize": "npm run --prefix backend sequelize",
+    "sequelize-cli": "npm run --prefix backend sequelize-cli",
+    "start": "concurrently \"npm run start-backend\" \"npm run start-frontend\"",
+    "start-backend": "npm start --prefix backend",
+    "start-frontend": "npm start --prefix frontend",
+    "frontend": "cd frontend && npm install && npm run build",
+    "backend": "cd backend && npm install && npm run build",
+    "build": "npm run frontend && npm run backend",
+    "postbuild": "cp -r frontend/build build/"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kenandcrys/Redneck.git"
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
-  "devDependencies": {
-    "node": "^18.17.1"
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^8.2.1",
+    "nodemon": "^3.0.1"
   }
 }
