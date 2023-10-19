@@ -15,12 +15,12 @@ export default function Rabbit() {
       });
   }, []);
 
-  const feedCard = rabbitData.map((rabbit) => (
-    <div className="card flex centered" key={rabbit.id}>
-      <img
-        src={rabbit.image}
+  const feedCard = rabbitData.map((rabbit, index) => (
+    <div className="card flex centered" key={index}>
+       <img
+        src={rabbit.url}
         className="card-img margin-15"
-        alt="X-Cel Feed bag"
+        alt={rabbit.name}
       />
       <div className="centered">
         <h1 className="card-header bold">{rabbit.name}</h1>

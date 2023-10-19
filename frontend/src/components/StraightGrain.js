@@ -18,7 +18,7 @@ export default function StraightGrain() {
   const feedCard = straightGrainData.map((straightGrain) => (
     <div className="card flex centered" key={straightGrain.id}>
       <img
-        src={straightGrain.image}
+        src={straightGrain.url}
         className="card-img margin-15"
         alt="X-Cel Feed bag"
       />

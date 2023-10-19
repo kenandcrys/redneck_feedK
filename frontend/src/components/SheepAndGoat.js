@@ -18,7 +18,7 @@ export default function SheepAndGoat() {
   const feedCard = sheepAndGoatData.map((sheepAndGoat) => (
     <div className="card flex centered" key={sheepAndGoat.id}>
       <img
-        src={sheepAndGoat.image}
+        src={sheepAndGoat.url}
         className="card-img margin-15"
         alt="X-Cel Feed bag"
       />

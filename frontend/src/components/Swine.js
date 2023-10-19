@@ -18,7 +18,7 @@ export default function Swine() {
   const feedCard = swineData.map((swine) => (
     <div className="card flex centered" key={swine.id}>
       <img
-        src={swine.image}
+        src={swine.url}
         className="card-img margin-15"
         alt="X-Cel Feed bag"
       />

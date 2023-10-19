@@ -6,8 +6,8 @@ const cm = require('../models/cattle-model')
 router.get('/', async (_req, res, next) => {
 
     try {
-        const cattle = await cm.getAll();
-        res.status(200).json(cattle);
+        const equine = await cm.getAll();
+        res.status(200).json(equine);
     } catch(err) {
         next(err);
     }

@@ -19,10 +19,22 @@ const sharedConfig = {
 module.exports = {
   development: {
     ...sharedConfig,
+    client: "sqlite3",
     connection: { filename: './data/Feed.db3' },
   },
   testing: {
     ...sharedConfig,
     connection: { filename: './data/testing.db3' },
   },
-}
+  production: {
+    use_env_variable: 'DATABASE_URL',
+    dialect: 'postgres',
+    seederStorage: 'sequelize',
+    dialectOptions: {
+      ssl: {
+        require: true,
+        rejectUnauthorized: false
+      }
+    }
+  }
+};

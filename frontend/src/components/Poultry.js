@@ -18,7 +18,7 @@ export default function Poultry() {
   const feedCard = poultryData.map((poultry) => (
     <div className="card flex centered" key={poultry.id}>
       <img
-        src={poultry.image}
+        src={poultry.url}
         className="card-img margin-15"
         alt="X-Cel Feed bag"
       />

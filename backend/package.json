@@ -1,9 +1,8 @@
 {
-  "name": "node-db3-project",
+  "name": "redneck-feeds-llc",
   "version": "1.0.0",
-  "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js",
+    "start": "node index.js",
     "migrate": "knex migrate:latest",
     "rollback": "knex migrate:rollback",
     "seed": "knex seed:run",
@@ -17,13 +16,14 @@
     "eslint": "^8.15.0",
     "jest": "^28.1.0",
     "knex-cleaner": "^1.3.1",
-    "nodemon": "^2.0.22",
     "supertest": "^6.2.3"
   },
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.18.1",
     "knex": "^2.5.1",
+    "nodemon": "^2.0.22",
+    "pg": "^8.11.3",
     "sqlite3": "^5.0.8"
   }
 }

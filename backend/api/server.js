@@ -9,6 +9,7 @@ const PoultryRouter = require('./feedResources/Routers/Poultry-router.js');
 const RabbitRouter = require('./feedResources/Routers/Rabbit-router.js');
 const server = express();
 
+server.use(express.json());
 
 server.use(cors());
 
