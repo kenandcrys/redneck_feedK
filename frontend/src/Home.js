@@ -1,5 +1,4 @@
 import React from "react";
-// import feedBag from "./images/feedBag.png";
 
 export default function Home() {
   return (

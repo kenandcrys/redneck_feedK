@@ -1,6 +1,6 @@
 .logo {
-    max-width: 95vw;
-    max-height: 225px;
+    max-width: 90vw;
+    max-height: 80vh;
     margin: 10px auto;
     display: flex;
     text-align: center;
@@ -13,7 +13,7 @@
 
 body {
     background: #6f6d68;
-    font-family: 'Caveat', cursive;
+    font-family: 'Caveat', serif;
 }
 
 a {
@@ -70,7 +70,7 @@ h1.header {
 }
 
 .card-header {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     background: white;
 }
 
@@ -89,6 +89,18 @@ h1.header {
 .card-img {
     height: 300px;
     width: 240px;
+}
+
+.card-img:hover {    
+    transition: all .2s ease-in-out;
+    transform: scale(1.25);
+}
+
+.feed-header {
+    color: black;
+    font-size: 2.5rem;
+    text-decoration: underline;
+    text-shadow:  2px 2px 2px lightgrey;
 }
 
 .centered {

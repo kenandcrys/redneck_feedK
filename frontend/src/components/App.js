@@ -1,9 +1,8 @@
-import "../styles/App.css"
+import "../styles/App.css";
 import React from "react";
 import Home from "./Home";
 import Footer from "./Footer";
 
-// import ErrorPage from "./ErrorPage";
 
 import Equine from "./Equine";
 import Cattle from "./Cattle";
@@ -21,7 +20,7 @@ import {
   Link,
   Outlet,
 } from "react-router-dom";
-// import headerBanner from "./images/header-banner.png";
+import headerBanner from "../images/redneck-feed-banner.png";
 
 export default function App() {
   const router = createBrowserRouter(
@@ -74,7 +73,6 @@ const Root = () => {
                   </Link>
                 </li>
                 <li className="nav-item dropdown">
-                  
                   <a
                     className="nav-link dropdown-toggle products"
                     href="#"
@@ -147,17 +145,19 @@ const Root = () => {
         </nav>
        
         <div>
-          <div >
-            <h1 className="border logo bold flex bg-lightgray">RedNeck Feeds LLC</h1>
-          </div>
+          <img
+            className="logo border flex"
+            src={headerBanner}
+            alt="Redneck Feed logo"
+          />
+          {/* <div >
+            <h1 classNameName="border logo bold flex bg-lightgray">RedNeck Feeds LLC</h1>
+          </div> */}
         </div>
       </header>
       <div>
-       
         <Outlet />
-        
         <Footer />
-        
       </div>
     </>
   );
