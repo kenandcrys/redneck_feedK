@@ -27,7 +27,6 @@ module.exports = {
     connection: { filename: './data/testing.db3' },
   },
   production: {
-    use_env_variable: 'DATABASE_URL',
     client: 'postgres',
     seederStorage: 'sequelize',
     dialectOptions: {
